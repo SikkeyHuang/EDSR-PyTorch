@@ -25,7 +25,7 @@ parser.add_argument('--dir_demo', type=str, default='../test',
                     help='demo image directory')
 parser.add_argument('--data_train', type=str, default='DIV2K',
                     help='train dataset name')
-parser.add_argument('--data_test', type=str, default='DIV2K',
+parser.add_argument('--data_test', type=str, default='Demo',
                     help='test dataset name')
 parser.add_argument('--data_range', type=str, default='1-800/801-810',
                     help='train/test data range')
@@ -95,7 +95,7 @@ parser.add_argument('--split_batch', type=int, default=1,
                     help='split the batch into smaller chunks')
 parser.add_argument('--self_ensemble', action='store_true',
                     help='use self-ensemble method for test')
-parser.add_argument('--test_only', action='store_true',
+parser.add_argument('--test_only', type = str, default='True',
                     help='set this option to test the model')
 parser.add_argument('--gan_k', type=int, default=1,
                     help='k value for adversarial loss')
@@ -138,7 +138,7 @@ parser.add_argument('--save_models', action='store_true',
                     help='save all intermediate models')
 parser.add_argument('--print_every', type=int, default=100,
                     help='how many batches to wait before logging training status')
-parser.add_argument('--save_results', action='store_true',
+parser.add_argument('--save_results', type = str, default='True',
                     help='save output results')
 parser.add_argument('--save_gt', action='store_true',
                     help='save low-resolution and high-resolution images together')
